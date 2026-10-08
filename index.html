@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <!-- ============================================================
-     VERSÃO FINAL 2 — AMARO TRANSPORTES
-     Alterações: header só com a logo real · hero com o Scania azul
-     · rodapé com a imagem da logo (fonte oficial)
-     Fotos: pasta img/ ao lado deste arquivo:
-       img/logo-amaro.png       img/scania-laranja.jpg
-       img/hero-daf.jpg         img/scania-patio.jpg
-       img/scania-azul.jpg      img/frota-noite.jpg
-       img/scania-estrada.jpg   img/ponte-maua.jpg
+     AMARO TRANSPORTES — VERSÃO FINAL 3
+     • Menu: letras escuras sobre a foto no topo, original ao rolar
+     • Header: somente a logo real (img/logo-amaro.png)
+     • Hero: Scania azul com morro (img/scania-azul.jpg)
+     • Rodapé: "AMARO." na fonte estilo-logo
 ============================================================ -->
 <head>
 <meta charset="UTF-8">
@@ -18,7 +15,7 @@
 <link rel="icon" href="img/logo-amaro.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -67,7 +64,7 @@ h2 em{font-style:normal;color:var(--red)}
 .pre-bar{width:min(280px,60vw);height:2px;background:rgba(244,244,242,.12)}
 .pre-bar i{display:block;height:100%;width:0;background:var(--red)}
 
-/* ============ HEADER — só a logo real ============ */
+/* ============ HEADER ============ */
 #progress{position:fixed;top:0;left:0;height:2px;background:var(--red);width:0;z-index:130}
 header{position:fixed;top:0;left:0;right:0;z-index:110;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 header.scrolled{background:rgba(12,12,13,.9);backdrop-filter:blur(10px);border-color:var(--line-soft)}
@@ -75,7 +72,7 @@ header.scrolled{background:rgba(12,12,13,.9);backdrop-filter:blur(10px);border-c
 .logo{display:flex;align-items:center}
 .logo img{height:42px;width:auto}
 nav{display:flex;gap:26px}
-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--mut);transition:color .2s}
+nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--mut);transition:color .35s}
 nav a:hover{color:var(--ink)}
 .header-right{display:flex;align-items:center;gap:14px}
 .header-right .btn{min-height:42px;padding:10px 18px}
@@ -88,7 +85,17 @@ nav a:hover{color:var(--ink)}
 #menu .m-close{position:absolute;top:14px;right:14px;width:48px;height:48px;display:grid;place-items:center}
 #menu .m-close svg{width:26px;height:26px;stroke:var(--ink);stroke-width:2;fill:none}
 
-/* ============ HERO — Scania azul com morro ============ */
+/* MENU: topo sobre a foto = letras escuras · rolando = original */
+header nav a{color:#141517}
+header nav a:hover{color:#000}
+header .header-right .btn{background:#141517;border-color:#141517;color:#fff}
+header .header-right .btn:hover{background:#000;border-color:#000}
+header.scrolled nav a{color:var(--mut)}
+header.scrolled nav a:hover{color:var(--ink)}
+header.scrolled .header-right .btn{background:var(--red);border-color:var(--red);color:#fff}
+header.scrolled .header-right .btn:hover{background:var(--red-dark);border-color:var(--red-dark)}
+
+/* ============ HERO ============ */
 .hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:#000;display:flex;align-items:flex-end}
 .hero-img,.hero-img img{position:absolute;inset:0;width:100%;height:100%}
 .hero-img img{object-fit:cover;object-position:center 55%;filter:saturate(.96) contrast(1.06) brightness(.88);animation:kb 26s ease-in-out infinite alternate}
@@ -253,11 +260,11 @@ h1 .dot{color:var(--red)}
 .form-note{margin-top:12px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--mut);text-align:center}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
 
-/* ============ FOOTER — logo oficial em destaque ============ */
+/* ============ FOOTER — "AMARO." na fonte estilo-logo ============ */
 footer{background:var(--bg3);border-top:1px solid var(--line-soft);overflow:hidden}
-.foot-logo{display:flex;justify-content:center;padding:clamp(48px,7vw,90px) var(--pad) 0}
-.foot-logo img{width:min(440px,74vw);height:auto}
-.foot-in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:26px 0 22px;margin-top:clamp(36px,5vw,64px);border-top:1px solid var(--line-soft);font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--mut)}
+.foot-mark{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(60px,15vw,230px);line-height:.9;letter-spacing:-.01em;color:#141518;text-align:center;user-select:none;transform:translateY(14%)}
+.foot-mark i{font-style:normal;color:var(--red-dark)}
+.foot-in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:26px 0 22px;border-top:1px solid var(--line-soft);font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--mut)}
 .foot-soc{display:flex;gap:16px}
 .foot-soc a{color:var(--mut)}
 .foot-soc a:hover{color:var(--ink)}
@@ -316,7 +323,7 @@ footer{background:var(--bg3);border-top:1px solid var(--line-soft);overflow:hidd
 
 <main id="top">
 
-  <!-- ============ HERO — Scania azul com morro verde ============ -->
+  <!-- ============ HERO — Scania azul com morro ============ -->
   <section class="hero">
     <div class="hero-img">
       <img src="img/scania-azul.jpg"
@@ -654,12 +661,9 @@ footer{background:var(--bg3);border-top:1px solid var(--line-soft);overflow:hidd
   </section>
 </main>
 
-<!-- FOOTER — logo oficial (fonte da marca) -->
+<!-- FOOTER — "AMARO." na fonte estilo-logo -->
 <footer>
-  <div class="foot-logo">
-    <img src="img/logo-amaro.png" alt="Amaro Transportes"
-         onerror="this.parentElement.innerHTML='<span style=&quot;font-family:var(--anton);font-size:clamp(60px,10vw,140px);color:var(--red)&quot;>AMARO<i style=&quot;font-style:normal;color:#f4f4f2&quot;> TRANSPORTES</i></span>';">
-  </div>
+  <div class="foot-mark" aria-hidden="true">AMARO<i>.</i></div>
   <div class="wrap">
     <div class="foot-in">
       <span>CNPJ 09.408.288/0001-02 — JAGUARÃO · RS</span>
